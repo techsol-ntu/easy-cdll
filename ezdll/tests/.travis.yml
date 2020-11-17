@@ -1,0 +1,21 @@
+language: python
+
+python:
+  - '3.8'
+  - '3.7'
+  - '3.6'
+  - '3.5'
+  - '3.4'
+
+matrix:
+  fast_finish: true
+
+install: true
+
+before_script:
+  - cd $TRAVIS_BUILD_DIR/ezdll/tests/
+  - g++ -std=c++17 -shared -fPIC -o ./libtest.so ./test.cpp
+  - ls
+  - cd $TRAVIS_BUILD_DIR/
+
+script: pytest
