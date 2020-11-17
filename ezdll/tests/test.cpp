@@ -11,13 +11,17 @@ void f(long *dims, void *python_data) {
         cout << params.a[i] << (i==k-1?'\n':' ');
     }
     cout << "b" << endl;
-    for (int i = 0, k = params.api_data_dims[1][0]; i < k; i++) {
-        cout << params.b[i] << (i==k-1?'\n':' ');
+    for (int i = 0, _ = params.api_data_dims[1][0]; i < _; i++) {
+        for (int j = 0, __ = params.api_data_dims[1][1]; j < __; j++) {
+            cout << params.b[i][j] << (j==__-1?'\n':' ');
+        }
     }
     cout << "c" << endl;
-    for (int i = 0, k = params.api_data_dims[2][0]; i < k; i++) {
-        for (int j = 0, l = params.api_data_dims[2][1]; j < l; j++) {
-            cout << params.c[i][j] << (j==l-1?'\n':' ');
+    for (int i = 0, _ = params.api_data_dims[2][0]; i < _; i++) {
+        for (int j = 0, __ = params.api_data_dims[2][1]; j < __; j++) {
+            for (int k = 0, ___ = params.api_data_dims[2][2]; k < ___; k++) {
+                cout << params.c[i][j][k] << (k==___-1?'\n':' ');
+            }
         }
     }
     cout << endl;

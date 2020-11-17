@@ -28,7 +28,7 @@ private:
         int size = dims[dims.size()-2];
         T buf = new K[size];
         for (int i = 0; i < size; i++) {
-            K _; buf[i] = _fill_data_1d(*container, *_, dims);
+            T _; K __; _ = &__; buf[i] = _fill_data_1d(*_, *__, dims);
         }
         return buf;
     }
@@ -38,7 +38,7 @@ private:
         int size = dims[dims.size()-3];
         T buf = new K[size];
         for (int i = 0; i < size; i++) {
-            K _; buf[i] = _fill_data_2d(*container, *_, dims);
+            T _; K __; _ = &__; buf[i] = _fill_data_2d(*_, *__, dims);
         }
         return buf;
     }
@@ -57,13 +57,13 @@ public:
             dims++;
         }
         a = _fill_data_1d(a, *a, api_data_dims[0]);
-        b = _fill_data_1d(b, *b, api_data_dims[1]);
-        c = _fill_data_2d(c, *c, api_data_dims[2]);
+        b = _fill_data_2d(b, *b, api_data_dims[1]);
+        c = _fill_data_3d(c, *c, api_data_dims[2]);
     }
     std::vector< std::vector<int> > api_data_dims;
     long *a;
-    long *b;
-    long **c;
+    long **b;
+    long ***c;
 };
 
 struct OutputStruct {
