@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from cstyles import Cdll
+from .cstyles import Cdll
 
 
 __author__ = 'Henry Chao'
