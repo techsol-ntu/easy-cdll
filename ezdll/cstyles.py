@@ -9,11 +9,21 @@ class Cdll:
 
     '''
     >>> import ezdll
-    >>> a = ezdll.cstyles.Cdll('./libtest.so')
+    >>> a = ezdll.Cdll('./libtest.so')
     >>> raw_data = {'a': [1,], 'b': [2, 3], 'c': [[4, 5], [6, 7]]}
     >>> results = a.call_function('api', raw_data)
 
     >>> print(results.contents.objective)
+
+    >>>
+    a
+    1
+    b
+    2 3
+    c
+    4 5
+    6 7
+    1.23456789
     '''
 
     def __init__(self, library_path):

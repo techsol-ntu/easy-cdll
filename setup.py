@@ -6,7 +6,7 @@ with open('README.md', 'r') as f:
 
 setuptools.setup(
     name='easy-cdll',
-    version='0.1.2',
+    version='0.2.0',
     author='techsol-ntu',
     author_email='techsol.workspace.tmp@gmail.com',
     description='Boost the transaction formatting and development between python and c languages',
