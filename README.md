@@ -1,5 +1,7 @@
 # easy-cdll
 
+[![Build Status](https://travis-ci.com/techsol-ntu/easy-cdll.svg?branch=main)](https://travis-ci.com/techsol-ntu/easy-cdll)
+
 Boost the transaction formatting and development between python and c languages
 
 ## Requirements
