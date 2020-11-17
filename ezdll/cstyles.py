@@ -104,11 +104,3 @@ class Cdll:
 
         res = cdll_func(ctypes.c_void_p(np.array(shapes).ctypes.data), ctypes.byref(params))
         return res
-
-
-
-a = Cdll('./libtest.so')
-raw_data = {'a': [1,], 'b': [2, 3], 'c': [[4, 5], [6, 7], [8, 9]]}
-results = a.call_function('api', raw_data)
-
-print(results.contents.objective)
