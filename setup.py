@@ -6,7 +6,7 @@ with open('README.md', 'r') as f:
 
 setuptools.setup(
     name='easy-cdll',
-    version='0.1.0',
+    version='0.1.1',
     author='techsol-ntu',
     author_email='techsol.workspace.tmp@gmail.com',
     description='Boost the transaction formatting and development between python and c languages',
@@ -19,5 +19,5 @@ setuptools.setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.3',
+    python_requires='>=3.8',
 )
