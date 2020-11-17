@@ -6,7 +6,7 @@ Boost the transaction formatting and development between python and c languages
 
 ## Requirements
 
-* Linux, maxOS
+* Linux, macOS
 * Python 3.8
 * pip3
 
