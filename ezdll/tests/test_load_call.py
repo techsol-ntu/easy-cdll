@@ -8,8 +8,9 @@ def test_platform():
     assert sys.platform == 'linux' or sys.platform == 'darwin'
 
 def test_compile():
-    os.system('g++ -std=c++17 -shared -fPIC -o libtest.so test.cpp')
-    a = cstyles.Cdll('./libtest.so')
+    if not os.path.exists('libtest.so'):
+        os.system('g++ -std=c++17 -shared -fPIC -o libtest.so test.cpp')
+    a = cstyles.Cdll(os.path.join('.', 'libtest.so'))
     raw_data = {'a': [1,], 'b': [2, 3], 'c': [[4, 5], [6, 7]]}
     results = a.call_function('api', raw_data)
     os.remove('libtest.so')
